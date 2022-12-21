@@ -6046,16 +6046,7 @@
             ],
             "description": "Cli error handling for console/command-line PHP applications.",
             "keywords": [
-                "artisan",
-                "cli",
-                "command-line",
-                "console",
-                "error",
-                "handling",
-                "laravel",
-                "laravel-zero",
-                "php",
-                "symfony"
+                "php"
             ],
             "support": {
                 "issues": "https://github.com/nunomaduro/collision/issues",
