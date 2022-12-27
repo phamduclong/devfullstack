@@ -9,9 +9,7 @@ pipeline {
         }
         stage('SSH-AGENT'){
             steps{
-                sshagent(['remote-ssh']) {
-                    sh 'ssh -o StrictHostKeyChecking=no -l deva_266_wcvn 154.53.61.23 touch pham.txt'
-                }
+                sshPublisher(publishers: [sshPublisherDesc(configName: 'dev', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: 'echo "buiding"', execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '/var/www/deva_266_wcvn/data/www/devapp.wp.edu.vn', remoteDirectorySDF: false, removePrefix: '', sourceFiles: '/var/jenkins_home/workspace/devfullstack-pipeline')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)])
             }
         }
     }
