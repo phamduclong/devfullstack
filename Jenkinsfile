@@ -16,7 +16,7 @@ pipeline {
                     remote.user = 'deva_266_wcvn'
                     remote.password = 'jej0HWSURp9g5CLk'
                     remote.allowAnyHosts = true
-                    sshCommand remote: remote, command: "cd www/devapp.wp.edu.vn/devfullstack"
+                    sshCommand remote: remote, command: "cd /var/www/deva_266_wcvn/data/www/devapp.wp.edu.vn/devfullstack"
                     sshCommand remote: remote, command: "git pull origin staging"
                 }
                 
